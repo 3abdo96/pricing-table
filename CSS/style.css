@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* || RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+:root {
+  /* Primary COLORS */
+  --BODY-COLOR: #d5e3fe;
+  --MAIN-COLOR: #004df3;
+  --FALSE-COLOR: #ff2725;
+  --TRUE-COLOR: #00b341;
+  --SECOND-COLOR: #646464;
+  --Mercury: #e5e5e5;
+
+  /* FONT */
+  --MAIN-FONTSIZE: 16px;
+  --BIGGER-FONTSIZE: 22px;
+}
+
+.container {
+  margin: 30px auto;
+  padding: 25px 15px;
+  text-align: center;
+}
+.text {
+  margin-bottom: 30px;
+}
+.text h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.text h5 {
+  font-size: 13px;
+  color: var(--SECOND-COLOR);
+  font-weight: 400;
+}
+
+.radios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--MAIN-FONTSIZE);
+  color: var(--SECOND-COLOR);
+}
+@media (width: 414px) {
+  .radios {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 40px;
+  }
+}
+.radio label {
+  margin-left: 5px;
+}
+input[type="radio"]:checked ~ label {
+  color: var(--MAIN-COLOR);
+}
+.plans {
+  display: flex;
+  justify-content: center;
+}
+@media (width: 414px) {
+  .plans {
+    flex-direction: column;
+  }
+}
+.plans .plan {
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid var(--Mercury);
+  text-align: center;
+}
+.plans .plan:nth-child(2):active {
+  border-color: var(--MAIN-COLOR);
+}
+.plans .plan:nth-child(2):active .special {
+  background-color: var(--MAIN-COLOR);
+  color: white;
+}
+.plans .plan .header {
+  color: var(--SECOND-COLOR);
+  text-align: left;
+  margin: 15px 0 15px 40px;
+}
+.plans .plan .header h2 {
+  font-size: 25px;
+  font-weight: 400;
+}
+.plans .plan .header .special-text {
+  color: var(--MAIN-COLOR);
+}
+.plans .plan .header h5 {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.plans .plan .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.plans .plan .price span {
+  font-size: 45px;
+  font-weight: 700;
+}
+.plans .plan .price div.special-head {
+  color: var(--MAIN-COLOR);
+}
+.plans .plan .price span.super {
+  position: relative;
+  font-size: 22px;
+  font-weight: 700;
+  bottom: 19px;
+}
+
+.plans .plan .price .sub {
+  font-size: 11px;
+  color: var(--SECOND-COLOR);
+  text-align: left;
+  width: 100px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.list {
+  font-size: 11px;
+  color: var(--SECOND-COLOR);
+  text-align: left;
+  margin: 20px 10px;
+}
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px;
+}
+.plan button {
+  color: var(--SECOND-COLOR);
+  font-size: var(--MAIN-FONTSIZE);
+  font-weight: 700;
+  width: fit-content;
+  padding: 7px 50px;
+  border: 1px solid var(--Mercury);
+  background-color: white;
+  cursor: pointer;
+  margin: 10px;
+}
+.plan .special {
+  color: var(--MAIN-COLOR);
+  background-color: var(--BODY-COLOR);
+}
